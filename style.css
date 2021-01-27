@@ -1,11 +1,18 @@
-#container {
-  margin-left: 2%;
-  margin-right: 0px;
-  padding-right: 0px;
-  display: grid;
-  border: 1px solid black;
+#pad {
+  float: right;
+  margin-right: 10vw;
+  margin-top: 10vh;
+  display: flex;
+  width: 80vmin;
+  height: 80vmin;
+  border: 1px solid rgb(248, 3, 3);
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
-.item {
-  border: 1px dotted #d3d3d3;
+.padPixel {
+  outline: 1px dotted lightgray;
+  width: 6.25%;
+  height: 6.25%;
+  background-color: white;
 }
