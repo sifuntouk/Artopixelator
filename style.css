@@ -1,18 +1,65 @@
-#pad {
-  float: right;
-  margin-right: 10vw;
-  margin-top: 10vh;
+body {
+  background-color: #1e1e1e;
+}
+.container {
+  margin-top: 5vmin;
   display: flex;
-  width: 80vmin;
-  height: 80vmin;
-  border: 1px solid rgb(248, 3, 3);
+  justify-content: center;
+}
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5vmin;
+}
+#pad {
+  display: flex;
+  width: 85vmin;
+  height: 85vmin;
+  border: 2vmin outset limegreen;
+  border-radius: 1vmin;
   flex-wrap: wrap;
   align-content: flex-start;
 }
 
 .padPixel {
-  outline: 1px dotted lightgray;
+  outline: 1px solid lightgray;
+  border-collapse: collapse;
   width: 6.25%;
   height: 6.25%;
-  background-color: white;
+}
+
+.padPixelNoGrid {
+  outline: 1px none lightgray;
+  border-collapse: collapse;
+  width: 6.25%;
+  height: 6.25%;
+}
+
+.btn {
+  background-color: limegreen;
+  border: 0.8vmin solid limegreen;
+  height: 9vmin;
+  width: 18vmin;
+  font-size: 2vmin;
+  margin-bottom: 1vmin;
+  border-radius: 1vmin;
+}
+
+.btn:hover {
+  border: 0.8vmin solid lime;
+  background-color: lime;
+  border-radius: 1vmin;
+}
+
+.btnActive {
+  border: 0.8vmin inset lime;
+  background-color: limegreen;
+}
+
+.menuText {
+  color: lightgray;
+  text-align: center;
+  margin-bottom: 0vmin;
+  font-size: 1.8vmin;
+  border-radius: 0.2vmin;
 }

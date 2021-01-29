@@ -7,10 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <div id="pad">
+    <div class="container">        
+        <div class="toolbar" id="toolbar">
+            <p class="menuText">Pixel Color</p>
+            <input type="color" class="btn" id="colorBtn">
+            <p class="menuText">Background Color</p>
+            <input type="color" class="btn" id="backgroundColorBtn">           
+            <button class='btn' id ='eraseBtn'>Erase</button>
+            <button class='btn' id ='clearBtn'>Clear</button>
+            <p class="menuText">Grid Line Color</p>
+            <input type="color" class="btn" id="gridColorBtn">             
+            <button class='btn' id ='gridBtn'>Hide Grid</button>
+            <!-- https://www.w3schools.com/howto/howto_custom_select.asp -->
+                <select class="btn" id="gridSelector">
+                    <option  value="8">8 x 8</option>
+                    <option  value="16">16 x 16</option>
+                    <option  value="32">32 x 32</option>
+                    <option  value="64">64 x 64</option>
+                    <option  value="128">128 x128</option>
+                </select>
         </div>
-        <div class="toolbar" id="toolbar"></div>
+        <div id="pad"></div>
     </div>
     <script src="script.js"></script>
 </body>
