@@ -1,13 +1,13 @@
 @font-face {
   font-family: "ARCADE";
-  src: url("ARCADE.TTF");
+  src: url("fonts/ARCADE.TTF");
 }
 body {
   background-color: #2d2d2d;
   margin: 0;
 }
 .container {
-  background-image: url("dsq.png");
+  background-image: url("images/dsq.png");
   background-repeat: repeat;
   display: flex;
   justify-content: center;
