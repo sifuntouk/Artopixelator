@@ -1,7 +1,7 @@
 # Artopixelator
 
 This project is part of The Odin Project Curriculum.  
-https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project .  
+https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project  
 It's function deviates from the requested on purpose, as I consider it more fun and useful that way.  
 
 Usage:
