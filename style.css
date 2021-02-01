@@ -1,29 +1,43 @@
+@font-face {
+  font-family: "ARCADE";
+  src: url("ARCADE.TTF");
+}
 body {
-  background-color: #1e1e1e;
+  background-color: #2d2d2d;
+  margin: 0;
 }
 .container {
-  margin-top: 5vmin;
+  background-image: url("dsq.png");
+  background-repeat: repeat;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 .toolbar {
   display: flex;
   flex-direction: column;
-  margin-right: 5vmin;
+  margin-right: 2vmin;
+  margin-top: 22.5vmin;
 }
 #pad {
   display: flex;
-  width: 85vmin;
-  height: 85vmin;
-  border: 2vmin outset limegreen;
-  border-radius: 1vmin;
   flex-wrap: wrap;
   align-content: flex-start;
+  border-radius: 1vmin;
+  border: 2vmin outset #bf211e;
+  width: 75vmin;
+  height: 75vmin;
+  box-shadow: 1vmin 2vmin 4vmin #000000c9;
+}
+
+#pad:hover {
+  border: 2vmin outset #ffb400;
+  box-shadow: none;
 }
 
 .padPixel {
-  outline: 1px solid lightgray;
-  border-collapse: collapse;
+  outline: 1px solid #2e2e2e;
   width: 6.25%;
   height: 6.25%;
 }
@@ -36,30 +50,115 @@ body {
 }
 
 .btn {
-  background-color: limegreen;
-  border: 0.8vmin solid limegreen;
-  height: 9vmin;
-  width: 18vmin;
-  font-size: 2vmin;
-  margin-bottom: 1vmin;
-  border-radius: 1vmin;
+  background-color: #bf211e;
+  border: 0vmin solid #bf211e;
+  border-radius: 0.3vmin;
+  color: #ffb400;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2.5vmin;
+  margin-bottom: 2vmin;
+  height: 5.5vmin;
+  width: 16vmin;
+  box-shadow: 1px 2vmin 4vmin #000000c9;
 }
 
 .btn:hover {
-  border: 0.8vmin solid lime;
-  background-color: lime;
-  border-radius: 1vmin;
+  color: #bf211e;
+  background-color: #ffb400;
+  box-shadow: none;
 }
 
 .btnActive {
-  border: 0.8vmin inset lime;
-  background-color: limegreen;
+  color: #bf211e;
+  background-color: #ffb400;
+  box-shadow: none;
 }
 
-.menuText {
-  color: lightgray;
+.colorBtn {
+  background-color: #bf211e;
+  height: 5vmin;
+  width: 16vmin;
+  padding: 0.2vmin;
+  border: 0;
+  border-radius: 0.3vmin;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  background-color: #bf211e;
+  color: #ffb400;
   text-align: center;
+  font-size: 1.5vmin;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-bottom: 2vmin;
+  border-radius: 0.3vmin;
+  box-shadow: 1px 2vmin 4vmin #000000c9;
+}
+
+label:hover > .colorBtn {
+  background-color: #ffb400;
+  box-shadow: none;
+}
+
+label:hover {
+  color: #bf211e;
+  background-color: #ffb400;
+  box-shadow: none;
+}
+
+label::selection {
+  color: #ffb400;
+  background-color: #bf211e;
+}
+select {
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Remove default arrow */
+  background-image: url(...); /* Add custom arrow */
+}
+
+select::-ms-expand {
+  display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+}
+
+h1 {
+  margin-top: 1vmin;
   margin-bottom: 0vmin;
-  font-size: 1.8vmin;
-  border-radius: 0.2vmin;
+  display: flex;
+  justify-content: center;
+  font-family: "ARCADE", sans-serif;
+  font-size: 10vmin;
+  color: #ffb400;
+  font-weight: normal;
+}
+
+h1::selection {
+  background-color: #ffb400;
+  color: #bf211e;
+}
+
+p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #ffb400;
+  margin-top: 3vmin;
+  font-size: 1.2vmin;
+}
+p::selection {
+  background-color: #ffb400;
+  color: #bf211e;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  color: #bf211e;
+}
+
+a::selection {
+  background-color: #bf211e;
+  color: #ffb400;
 }

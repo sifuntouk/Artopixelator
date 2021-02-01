@@ -1,11 +1,10 @@
-// Na ftiaxw ena function na kanei reset to isDrawing otan to pontiki vgenei apexw apo to pad
-
 let gridSize = 16;
 let isDrawing = false;
 let pixelColor = '#000000';
-let pixelBackgroundColor = '#ffffff';
+let pixelBackgroundColor = '#149911';
 
-// Converts to hex the value which for some fucking reason the style.backgroundColor returns as Rgb
+// Converts to hex the color value which for some
+// fucking reason the style.backgroundColor returns as Rgb
 // https://stackoverflow.com/questions/11670019/does-object-style-color-only-return-rgb
 function convertRgbToHex(e) {
   const rgb = getComputedStyle(e).backgroundColor.match(/\d+/g);
@@ -27,16 +26,16 @@ function pickBackgroundDrawingColor() {
 
 // Add  change  event listener on background coloring color picker
 const backgroundColorBtn = document.getElementById('backgroundColorBtn');
-backgroundColorBtn.value = '#ffffff';
+backgroundColorBtn.value = '#149911';
 backgroundColorBtn.addEventListener('change', pickBackgroundDrawingColor);
 
 function pickDrawingColor() {
   pixelColor = this.value;
 }
 
-// Set the value of color picker to black
+// Set the value of color picker
 // Add event listener to
-const colorBtn = document.getElementById('colorBtn');
+const colorBtn = document.getElementById('pixelColorBtn');
 colorBtn.value = '#000000';
 colorBtn.addEventListener('change', pickDrawingColor);
 
@@ -121,9 +120,9 @@ function erase() {
 eraseBtn.addEventListener('click', erase);
 
 // Slect the grid line color button
-// Set the initial valie to light gray
+// Set the initial valie
 const gridLineColor = document.getElementById('gridColorBtn');
-gridLineColor.value = '#D3D3D3';
+gridLineColor.value = '#2E2E2E';
 // change the outline color of each pixel
 function changeGridColor() {
   const pixel = document.querySelectorAll('.padPixel');

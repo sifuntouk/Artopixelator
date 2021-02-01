@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sketch Pad</title>
+    <title>Artopixelator!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">        
-        <div class="toolbar" id="toolbar">
-            <p class="menuText">Pixel Color</p>
-            <input type="color" class="btn" id="colorBtn">
-            <p class="menuText">Background Color</p>
-            <input type="color" class="btn" id="backgroundColorBtn">           
-            <button class='btn' id ='eraseBtn'>Erase</button>
-            <button class='btn' id ='clearBtn'>Clear</button>
-            <p class="menuText">Grid Line Color</p>
-            <input type="color" class="btn" id="gridColorBtn">             
+    <div class="container">
+                
+        <div class="toolbar" id="toolbar">            
+            <label for="colorBtn" class="colorLabel">Pixel Color
+            <input type="color" class="colorBtn" id="pixelColorBtn">
+            </label>
+            <label for="backgroundColorBtn">Background Color
+            <input type="color" class="colorBtn" id="backgroundColorBtn">
+            </label>
+            <label for="gridColorBtn">Grid Line Color
+            <input type="color" class="colorBtn" id="gridColorBtn">
+            </label>       
+            <button class='btn' id ='eraseBtn'>Erase</button>                        
             <button class='btn' id ='gridBtn'>Hide Grid</button>
-            <!-- https://www.w3schools.com/howto/howto_custom_select.asp -->
+            <button class='btn' id ='clearBtn'>Clear</button>
                 <select class="btn" id="gridSelector">
                     <option  value="8">8 x 8</option>
                     <option  value="16">16 x 16</option>
                     <option  value="32">32 x 32</option>
                     <option  value="64">64 x 64</option>
-                    <option  value="128">128 x128</option>
+                    <option  value="128">128 x 128</option>
                 </select>
         </div>
-        <div id="pad"></div>
+        <div>
+            <h1>Artopixelator!</h1> 
+            <div id="pad"></div>
+            <p>This project is part of <a href="https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project">The Odin Project </a> Curriculum.</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
