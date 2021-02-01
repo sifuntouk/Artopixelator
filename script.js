@@ -109,12 +109,11 @@ const eraseBtn = document.getElementById('eraseBtn');
 // Toggle the drawing color between background and drawing colors
 function erase() {
   if (pixelColor !== pixelBackgroundColor) {
-    eraseBtn.classList.add('btnActive');
     pixelColor = pixelBackgroundColor;
   } else {
-    eraseBtn.classList.remove('btnActive');
     pixelColor = colorBtn.value;
   }
+  eraseBtn.classList.toggle('btnActive');
 }
 // Add  click event listener on clear button
 eraseBtn.addEventListener('click', erase);
@@ -133,12 +132,18 @@ gridLineColor.addEventListener('change', changeGridColor);
 
 // Slect the grid button
 const gridBtn = document.getElementById('gridBtn');
+
+// Toggle the text on the button between Hide Grid Show Grid
+function toggleHideShowBtnText() {
+  if (gridBtn.textContent === 'Show Grid') gridBtn.textContent = 'Hide Grid';
+  else gridBtn.textContent = 'Show Grid';
+}
 // Toggle the class of grid pixels to hide or show the grid lines
 // and toggles the button class to mark it as active or not
 function gridHide() {
   const pixel = document.querySelectorAll('.padPixel');
   pixel.forEach((e) => e.classList.toggle('padPixelNoGrid'));
-  gridBtn.classList.toggle('btnActive');
+  toggleHideShowBtnText();
 }
 // Add event listener on grid hide button
 gridBtn.addEventListener('click', gridHide);
